@@ -1,0 +1,159 @@
+:root {
+	--white: #fff;
+	--white-1: #f2f2f2;
+	--gray-1: #8090a5;
+	--gray-2: #47525e;
+	--dark-gray-1: #292f36;
+}
+
+html {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+body {
+	margin: unset;
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+h1,
+p {
+	margin: unset;
+}
+
+.tab-group {
+	margin: 10px auto;
+	display: flex;
+}
+
+.btn-tab {
+	width: 100%;
+	padding: 8px 0;
+	font-size: calc(15px + (16 - 15) * (100vw - 300px) / (1920 - 300));
+}
+
+.btn-all-promotions,
+.btn-new-customers {
+	background-color: transparent;
+	color: var(--gray-1);
+	border: 1px solid var(--gray-1);
+}
+
+.btn-all-promotions {
+	border-radius: 8px 0px 0px 8px;
+}
+
+.btn-new-customers {
+	border-radius: 0px 8px 8px 0px;
+}
+
+.btn-all-promotions:hover,
+.btn-new-customers:hover {
+	background-color: var(--gray-1);
+	color: var(--white);
+	border: 1px solid var(--gray-1);
+}
+
+.btn-tab-active {
+	background-color: var(--gray-1);
+	color: var(--white);
+	border: 1px solid var(--gray-1);
+}
+
+.cards {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+	background-color: var(--white-1);
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+.card-img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-title {
+	color: var(--gray-2);
+	font-weight: 500;
+	font-size: calc(24px + (32 - 24) * (100vw - 300px) / (1920 - 300));
+	text-align: center;
+}
+
+.card-body {
+	padding: 10px;
+}
+
+.card-description {
+	font-size: calc(15px + (16 - 15) * (100vw - 300px) / (1920 - 300));
+	line-height: normal;
+	margin: 10px 0;
+	color: var(--gray-2);
+}
+
+.btn {
+	display: inline-block;
+	line-height: normal;
+	white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	box-sizing: border-box;
+	transition: 0.1s ease-in-out;
+}
+
+.btn-card {
+	border-radius: 8px;
+	width: 100%;
+	border: 1px solid var(--gray-2);
+	padding: 8px 0;
+	font-size: calc(15px + (16 - 15) * (100vw - 300px) / (1920 - 300));
+}
+
+.btn-group {
+	display: flex;
+	gap: 20px;
+}
+
+.btn-terms {
+	background-color: transparent;
+	color: var(--gray-2);
+}
+
+.btn-join {
+	background-color: var(--gray-2);
+	color: var(--white);
+}
+
+.btn-terms:hover,
+.btn-join:hover {
+	background-color: var(--dark-gray-1);
+	color: var(--white);
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
